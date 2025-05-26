@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog Title</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="profile">
+                
+                <div class="profile-image">
+                    <img src="/assets/images/jowaka31.png" alt="Your Name">
+                </div>
+                
+                <h1 class="site-title">Your Blog Title</h1>
+                <p class="site-description">Your blog description</p>
+                <div class="author-info">
+                    <h2>Your Name</h2>
+                    <p>Your short bio</p>
+                </div>
+                <div class="social-links">
+                    
+                    <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
+                    
+                    
+                    <a href="https://linkedin.com/in/your-linkedin-username" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    
+                    
+                    <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+                    
+                </div>
+            </div>
+            <nav class="site-nav">
+                
+                <div class="nav-section">
+                    <div class="nav-section-header">
+                        <h3>Diary</h3>
+                        <button class="toggle-btn" aria-label="Toggle Diary menu">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <ul class="nav-section-content collapsed">
+                        
+                        <li><a href="/category/diary">diary</a></li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-header">
+                        <h3>Data</h3>
+                        <button class="toggle-btn" aria-label="Toggle Data menu">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <ul class="nav-section-content collapsed">
+                        
+                        <li><a href="/category/machine-learning">Machine-Learning</a></li>
+                        
+                        <li><a href="/category/deep-learning">Deep-Learning</a></li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-header">
+                        <h3>Development</h3>
+                        <button class="toggle-btn" aria-label="Toggle Development menu">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <ul class="nav-section-content collapsed">
+                        
+                        <li><a href="/category/python">Python</a></li>
+                        
+                        <li><a href="/category/web">Web</a></li>
+                        
+                    </ul>
+                    
+                </div>
+                
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="home">
+    
+    <article class="post-preview">
+        <h2 class="post-title">
+            <a href="/2025/03/30/welcome-to-my-blog/">Welcome to My Blog</a>
+        </h2>
+        <div class="post-meta">
+            <time datetime="2025-03-30T00:00:00+09:00">
+                30 Mar 2025
+            </time>
+            
+            in
+            
+            <a href="/category/diary">Diary</a>
+            
+            
+            
+        </div>
+        <div class="post-excerpt">
+            <p>This is my first blog post! I’ll be sharing my thoughts and experiences here.</p>
+
+        </div>
+        <a href="/2025/03/30/welcome-to-my-blog/" class="read-more">Read More →</a>
+    </article>
+    
+
+    
+</div> 
+        </main>
+
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2025. Your Name</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 네비게이션 토글 기능
+            document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    icon.classList.toggle('rotated');
+                    const content = this.closest('.nav-section').querySelector('.nav-section-content');
+                    content.classList.toggle('collapsed');
+                    const sectionId = this.closest('.nav-section').querySelector('h3').textContent;
+                    localStorage.setItem('nav-section-' + sectionId, content.classList.contains('collapsed') ? 'closed' : 'open');
+                });
+            });
+
+            // 저장된 네비게이션 상태 복원
+            document.querySelectorAll('.nav-section').forEach(function(section) {
+                const sectionId = section.querySelector('h3').textContent;
+                const savedState = localStorage.getItem('nav-section-' + sectionId);
+                const content = section.querySelector('.nav-section-content');
+                const icon = section.querySelector('.toggle-btn i');
+                if (savedState === 'open') {
+                    content.classList.remove('collapsed');
+                    icon.classList.add('rotated');
+                }
+            });
+
+            // 목차 생성
+            if (document.querySelector('.post-content')) {
+                const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3');
+                const toc = document.querySelector('#toc');
+                if (toc && headings.length > 0) {
+                    const tocList = document.createElement('ul');
+                    tocList.className = 'toc-list';
+                    
+                    headings.forEach((heading, index) => {
+                        // ID 생성
+                        heading.id = heading.id || `heading-${index}`;
+                        
+                        // 목차 항목 생성
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = `#${heading.id}`;
+                        a.textContent = heading.textContent;
+                        a.className = heading.tagName === 'H1' ? 'toc-h1' : 
+                                    heading.tagName === 'H2' ? 'toc-h2' : 'toc-h3';
+                        
+                        // 클릭 이벤트
+                        a.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        });
+                        
+                        li.appendChild(a);
+                        tocList.appendChild(li);
+                    });
+                    
+                    toc.appendChild(tocList);
+
+                    // 스크롤 이벤트로 현재 섹션 하이라이트
+                    window.addEventListener('scroll', () => {
+                        const scrollPosition = window.scrollY;
+                        
+                        headings.forEach((heading, index) => {
+                            const link = tocList.querySelector(`a[href="#${heading.id}"]`);
+                            if (!link) return;
+                            
+                            const nextHeading = headings[index + 1];
+                            const isActive = 
+                                scrollPosition >= heading.offsetTop - 100 && 
+                                (!nextHeading || scrollPosition < nextHeading.offsetTop - 100);
+                            
+                            link.classList.toggle('active', isActive);
+                        });
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

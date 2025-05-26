@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T16:14:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your Blog Title</title><subtitle>Your blog description</subtitle><author><name>Your Name</name></author><entry><title type="html">Welcome to My Blog</title><link href="http://localhost:4000/2025/03/30/welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2025-03-30T00:00:00+09:00</published><updated>2025-03-30T00:00:00+09:00</updated><id>http://localhost:4000/2025/03/30/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/2025/03/30/welcome-to-my-blog/"><![CDATA[<p>This is my first blog post! I’ll be sharing my thoughts and experiences here.</p>
+
+<h2 id="what-to-expect">What to expect</h2>
+
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+
+<h1 id="my-hobby">My Hobby</h1>
+
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+
+<h2 id="workout">workout</h2>
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+
+<h2 id="weight-training">weight training</h2>
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+
+<h2 id="running">running</h2>
+
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+<ul>
+  <li>Technical articles</li>
+  <li>Personal experiences</li>
+  <li>Learning resources</li>
+  <li>Project updates</li>
+</ul>
+
+<p>Stay tuned for more content!</p>
+
+<h1 id="안녕하세요">안녕하세요</h1>
+
+<h2 id="반갑습니다">반갑습니다.</h2>
+
+<h3 id="김정우-입니다">김정우 입니다.</h3>]]></content><author><name>Your Name</name></author><category term="Diary" /><summary type="html"><![CDATA[This is my first blog post! I’ll be sharing my thoughts and experiences here.]]></summary></entry></feed>

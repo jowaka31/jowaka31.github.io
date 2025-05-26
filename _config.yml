@@ -1,0 +1,46 @@
+title: Your Blog Title
+description: Your blog description
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Navigation
+navigation:
+  - title: Diary
+    children:
+      - title: diary
+        url: /category/diary
+  - title: Data
+    children:
+      - title: Machine-Learning
+        url: /category/machine-learning
+      - title: Deep-Learning
+        url: /category/deep-learning
+  - title: Development
+    children:
+      - title: Python
+        url: /category/python
+      - title: Web
+        url: /category/web
+
+# Author information
+author:
+  name: Your Name
+  bio: Your short bio
+  image: ./assets/images/jowaka31.png  # Add your profile image here
+  social:
+    github: your-github-username
+    linkedin: your-linkedin-username
+    email: your-email@example.com
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/page:num/" 
