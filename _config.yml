@@ -17,17 +17,21 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+  auto_ids: true
+  enable_coderay: false
+  parse_span_html: true
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
 permalink: /:year/:month/:day/:title/
 
 # Navigation
 navigation:
   - title: Diary
     children:
-      - diary
+      - Diary
   - title: Data
     children:
-      - Machine-Learning
-      - Deep-Learning
+      - Machine Learning
+      - Deep Learning
   - title: Development
     children:
       - Python
@@ -36,12 +40,9 @@ navigation:
 # Author information
 author:
   name: jowaka
-  # bio: 
-  image: ./assets/images/jowaka31.png  # Add your profile image here
-  
+  image: ./assets/images/jowaka31.png
   social:
     github: jowaka31
-    # linkedin: your-linkedin-username
     email: jowaka31@gmail.com
 
 # Build settings

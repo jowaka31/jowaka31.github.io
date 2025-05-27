@@ -1,0 +1,64 @@
+@import "{{ site.theme }}";
+
+// 기본 폰트 크기 및 가독성 개선
+body {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.post-content, .page-content {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+// 목차 스타일
+.toc {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  width: 240px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+
+  h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.3em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    ul {
+      padding-left: 1.5em;
+    }
+  }
+
+  li {
+    margin: 0.4em 0;
+    line-height: 1.4;
+  }
+
+  a {
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.9em;
+
+    &:hover {
+      color: #228be6;
+    }
+  }
+}
+
+// 목차가 있을 때 본문 여백 조정
+.page-content, .post-content {
+  max-width: calc(100% - 300px);
+} 

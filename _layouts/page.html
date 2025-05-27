@@ -8,6 +8,12 @@ layout: default
     </header>
 
     <div class="page-content">
+        {% if page.toc %}
+        <aside class="toc">
+            <h2>목차</h2>
+            {% include toc.html html=content %}
+        </aside>
+        {% endif %}
         {{ content }}
     </div>
 </article> 
