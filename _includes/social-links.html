@@ -1,0 +1,19 @@
+<div class="social-links">
+    {% if site.author.social.github %}
+    <a href="https://github.com/{{ site.author.social.github }}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+    {% endif %}
+    
+    {% if site.author.social.linkedin %}
+    <a href="https://linkedin.com/in/{{ site.author.social.linkedin }}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    {% endif %}
+    
+    {% if site.author.social.email %}
+    <a href="mailto:{{ site.author.social.email }}">
+        <i class="fas fa-envelope"></i>
+    </a>
+    {% endif %}
+</div> 

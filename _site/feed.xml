@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T16:14:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your Blog Title</title><subtitle>Your blog description</subtitle><author><name>Your Name</name></author><entry><title type="html">Welcome to My Blog</title><link href="http://localhost:4000/2025/03/30/welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2025-03-30T00:00:00+09:00</published><updated>2025-03-30T00:00:00+09:00</updated><id>http://localhost:4000/2025/03/30/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/2025/03/30/welcome-to-my-blog/"><![CDATA[<p>This is my first blog post! I’ll be sharing my thoughts and experiences here.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-27T11:42:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">jowaka31’s blog</title><subtitle>일반적인 것들에 대한 &lt;br&gt; 구체적인 이야기.
+</subtitle><author><name>jowaka</name></author><entry><title type="html">Python 이란 무엇인가.</title><link href="http://localhost:4000/2025/05/01/hello-python/" rel="alternate" type="text/html" title="Python 이란 무엇인가." /><published>2025-05-01T00:00:00+09:00</published><updated>2025-05-01T00:00:00+09:00</updated><id>http://localhost:4000/2025/05/01/hello-python</id><content type="html" xml:base="http://localhost:4000/2025/05/01/hello-python/"><![CDATA[<h1 id="python">Python?</h1>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">print</span><span class="p">(</span><span class="sh">'</span><span class="s">Hello World</span><span class="sh">'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="python-1">Python!</h2>
+
+<p>파이썬은 인터프리터 언어에요.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span> 
+
+
+<span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+    
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>]]></content><author><name>jowaka</name></author><category term="Python" /><summary type="html"><![CDATA[Python?]]></summary></entry><entry><title type="html">Welcome to My Blog</title><link href="http://localhost:4000/2025/03/30/welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2025-03-30T00:00:00+09:00</published><updated>2025-03-30T00:00:00+09:00</updated><id>http://localhost:4000/2025/03/30/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/2025/03/30/welcome-to-my-blog/"><![CDATA[<p>This is my first blog post! I’ll be sharing my thoughts and experiences here.</p>
 
 <h2 id="what-to-expect">What to expect</h2>
 
@@ -98,4 +131,4 @@
 
 <h2 id="반갑습니다">반갑습니다.</h2>
 
-<h3 id="김정우-입니다">김정우 입니다.</h3>]]></content><author><name>Your Name</name></author><category term="Diary" /><summary type="html"><![CDATA[This is my first blog post! I’ll be sharing my thoughts and experiences here.]]></summary></entry></feed>
+<h3 id="김정우-입니다">김정우 입니다.</h3>]]></content><author><name>jowaka</name></author><category term="Diary" /><summary type="html"><![CDATA[This is my first blog post! I’ll be sharing my thoughts and experiences here.]]></summary></entry></feed>

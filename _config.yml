@@ -1,40 +1,48 @@
-title: Your Blog Title
-description: Your blog description
+title: jowaka31's blog
+description: > 
+  일반적인 것들에 대한 <br>
+  구체적인 이야기.
 baseurl: ""
 url: ""
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 permalink: /:year/:month/:day/:title/
 
 # Navigation
 navigation:
   - title: Diary
     children:
-      - title: diary
-        url: /category/diary
+      - diary
   - title: Data
     children:
-      - title: Machine-Learning
-        url: /category/machine-learning
-      - title: Deep-Learning
-        url: /category/deep-learning
+      - Machine-Learning
+      - Deep-Learning
   - title: Development
     children:
-      - title: Python
-        url: /category/python
-      - title: Web
-        url: /category/web
+      - Python
+      - Web
 
 # Author information
 author:
-  name: Your Name
-  bio: Your short bio
+  name: jowaka
+  # bio: 
   image: ./assets/images/jowaka31.png  # Add your profile image here
+  
   social:
-    github: your-github-username
-    linkedin: your-linkedin-username
-    email: your-email@example.com
+    github: jowaka31
+    # linkedin: your-linkedin-username
+    email: jowaka31@gmail.com
 
 # Build settings
 plugins:

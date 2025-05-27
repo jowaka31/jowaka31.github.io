@@ -3,9 +3,8 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jowaka31's blog</title>
-    <meta name="description" content="일반적인 것들에 대한 <br> 구체적인 이야기.
-">
+    <title>Python 이란 무엇인가. - jowaka31's blog</title>
+    <meta name="description" content="Python?">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -15,7 +14,7 @@
     
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/2025/05/01/hello-python/">
     <link rel="alternate" type="application/rss+xml" title="jowaka31's blog" href="/feed.xml">
 </head> 
 <body>
@@ -161,49 +160,80 @@ document.addEventListener('DOMContentLoaded', function() {
         </aside>
 
         <main class="content">
-            <div class="home">
-    
-    <article class="post-preview">
-        <h2 class="post-title">
-            <a href="/2025/05/01/hello-python/">Python 이란 무엇인가.</a>
-        </h2>
+            <article class="post">
+    <header class="post-header">
+        <h1 class="post-title">Python 이란 무엇인가.</h1>
         <div class="post-meta">
             <time datetime="2025-05-01T00:00:00+09:00">
                 01 May 2025
             </time>
             
-            <div class="post-categories">
-                
-                <a class="category-tag" href="/category/python">Python</a>
-                
-            </div>
+            in
+            
+            <a href="/category/python">Python</a>
+            
+            
+            
+            
             
         </div>
-    </article>
-    
-    <article class="post-preview">
-        <h2 class="post-title">
-            <a href="/2025/03/30/welcome-to-my-blog/">Welcome to My Blog</a>
-        </h2>
-        <div class="post-meta">
-            <time datetime="2025-03-30T00:00:00+09:00">
-                30 Mar 2025
-            </time>
-            
-            <div class="post-categories">
-                
-                <a class="category-tag" href="/category/diary">Diary</a>
-                
-            </div>
-            
-        </div>
-    </article>
-    
+    </header>
 
+    <div class="post-content">
+        <h1 id="python">Python?</h1>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">print</span><span class="p">(</span><span class="sh">'</span><span class="s">Hello World</span><span class="sh">'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="python-1">Python!</h2>
+
+<p>파이썬은 인터프리터 언어에요.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span> 
+
+
+<span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
     
-</div> 
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-navigation">
+            
+            <a class="prev" href="/2025/03/30/welcome-to-my-blog/">&laquo; Welcome to My Blog</a>
+            
+            
+            
+        </div>
+    </footer>
+</article> 
         </main>
 
+        
+        <aside class="toc-sidebar">
+            <div class="toc-container">
+                <div id="toc"></div>
+            </div>
+        </aside>
         
     </div>
 
@@ -214,6 +244,55 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </footer> 
 
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 목차 생성
+            const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3');
+            const toc = document.querySelector('#toc');
+            if (toc && headings.length > 0) {
+                const tocList = document.createElement('ul');
+                tocList.className = 'toc-list';
+                
+                headings.forEach((heading, index) => {
+                    heading.id = heading.id || `heading-${index}`;
+                    
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `#${heading.id}`;
+                    a.textContent = heading.textContent;
+                    a.className = `toc-${heading.tagName.toLowerCase()}`;
+                    
+                    a.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
+                    
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+                
+                toc.appendChild(tocList);
+
+                // 스크롤 이벤트로 현재 섹션 하이라이트
+                window.addEventListener('scroll', () => {
+                    const scrollPosition = window.scrollY;
+                    
+                    headings.forEach((heading, index) => {
+                        const link = tocList.querySelector(`a[href="#${heading.id}"]`);
+                        if (!link) return;
+                        
+                        const nextHeading = headings[index + 1];
+                        const isActive = 
+                            scrollPosition >= heading.offsetTop - 100 && 
+                            (!nextHeading || scrollPosition < nextHeading.offsetTop - 100);
+                        
+                        link.classList.toggle('active', isActive);
+                    });
+                });
+            }
+        });
+    </script>
     
 </body>
 </html> 

@@ -1,100 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Blog - Your Blog Title</title>
+    <title>Welcome to My Blog - jowaka31's blog</title>
+    <meta name="description" content="This is my first blog post! I’ll be sharing my thoughts and experiences here.">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+    <link rel="canonical" href="http://localhost:4000/2025/03/30/welcome-to-my-blog/">
+    <link rel="alternate" type="application/rss+xml" title="jowaka31's blog" href="/feed.xml">
+</head> 
 <body>
     <div class="wrapper">
         <aside class="sidebar">
-            <div class="profile">
-                
-                <div class="profile-image">
-                    <img src="/assets/images/jowaka31.png" alt="Your Name">
-                </div>
-                
-                <h1 class="site-title">Your Blog Title</h1>
-                <p class="site-description">Your blog description</p>
-                <div class="author-info">
-                    <h2>Your Name</h2>
-                    <p>Your short bio</p>
-                </div>
-                <div class="social-links">
-                    
-                    <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
-                    
-                    
-                    <a href="https://linkedin.com/in/your-linkedin-username" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    
-                    
-                    <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
-                    
-                </div>
-            </div>
+            <header class="site-header">
+    <nav class="top-nav">
+        <a href="/" class="nav-link">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="/about/" class="nav-link">
+            <i class="fas fa-user"></i> Me
+        </a>
+    </nav>
+    <div class="profile">
+        
+        <div class="profile-image">
+            <img src="/assets/images/jowaka31.png" alt="jowaka">
+        </div>
+        
+        <h1 class="site-title">jowaka31's blog</h1>
+        <p class="site-description">일반적인 것들에 대한 <br> 구체적인 이야기.
+</p>
+        <div class="author-info">
+            <h2>jowaka</h2>
+            <p></p>
+        </div>
+        <div class="social-links">
+    
+    <a href="https://github.com/jowaka31" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="mailto:jowaka31@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+    
+</div> 
+    </div>
+</header> 
             <nav class="site-nav">
+    
+    <div class="nav-section">
+        <div class="nav-section-header">
+            <h3>Diary</h3>
+            <button class="toggle-btn" aria-label="Toggle Diary menu">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-section-content collapsed">
+            
+            <li>
                 
-                <div class="nav-section">
-                    <div class="nav-section-header">
-                        <h3>Diary</h3>
-                        <button class="toggle-btn" aria-label="Toggle Diary menu">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                    
-                    <ul class="nav-section-content collapsed">
-                        
-                        <li><a href="/category/diary">diary</a></li>
-                        
-                    </ul>
-                    
-                </div>
+                <a href="/category/diary">diary</a>
+            </li>
+            
+        </ul>
+        
+    </div>
+    
+    <div class="nav-section">
+        <div class="nav-section-header">
+            <h3>Data</h3>
+            <button class="toggle-btn" aria-label="Toggle Data menu">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-section-content collapsed">
+            
+            <li>
                 
-                <div class="nav-section">
-                    <div class="nav-section-header">
-                        <h3>Data</h3>
-                        <button class="toggle-btn" aria-label="Toggle Data menu">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                    
-                    <ul class="nav-section-content collapsed">
-                        
-                        <li><a href="/category/machine-learning">Machine-Learning</a></li>
-                        
-                        <li><a href="/category/deep-learning">Deep-Learning</a></li>
-                        
-                    </ul>
-                    
-                </div>
+                <a href="/category/machine-learning">Machine-Learning</a>
+            </li>
+            
+            <li>
                 
-                <div class="nav-section">
-                    <div class="nav-section-header">
-                        <h3>Development</h3>
-                        <button class="toggle-btn" aria-label="Toggle Development menu">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                    
-                    <ul class="nav-section-content collapsed">
-                        
-                        <li><a href="/category/python">Python</a></li>
-                        
-                        <li><a href="/category/web">Web</a></li>
-                        
-                    </ul>
-                    
-                </div>
+                <a href="/category/deep-learning">Deep-Learning</a>
+            </li>
+            
+        </ul>
+        
+    </div>
+    
+    <div class="nav-section">
+        <div class="nav-section-header">
+            <h3>Development</h3>
+            <button class="toggle-btn" aria-label="Toggle Development menu">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-section-content collapsed">
+            
+            <li>
                 
-            </nav>
+                <a href="/category/python">Python</a>
+            </li>
+            
+            <li>
+                
+                <a href="/category/web">Web</a>
+            </li>
+            
+        </ul>
+        
+    </div>
+    
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 네비게이션 토글 기능
+    document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            icon.classList.toggle('rotated');
+            const content = this.closest('.nav-section').querySelector('.nav-section-content');
+            content.classList.toggle('collapsed');
+            const sectionId = this.closest('.nav-section').querySelector('h3').textContent;
+            localStorage.setItem('nav-section-' + sectionId, content.classList.contains('collapsed') ? 'closed' : 'open');
+        });
+    });
+
+    // 저장된 네비게이션 상태 복원
+    document.querySelectorAll('.nav-section').forEach(function(section) {
+        const sectionId = section.querySelector('h3').textContent;
+        const savedState = localStorage.getItem('nav-section-' + sectionId);
+        const content = section.querySelector('.nav-section-content');
+        const icon = section.querySelector('.toggle-btn i');
+        if (savedState === 'open') {
+            content.classList.remove('collapsed');
+            icon.classList.add('rotated');
+        }
+    });
+});
+</script> 
         </aside>
 
         <main class="content">
             <article class="post">
     <header class="post-header">
-        <h1>Welcome to My Blog</h1>
+        <h1 class="post-title">Welcome to My Blog</h1>
         <div class="post-meta">
             <time datetime="2025-03-30T00:00:00+09:00">
                 30 Mar 2025
@@ -103,6 +171,8 @@
             in
             
             <a href="/category/diary">Diary</a>
+            
+            
             
             
             
@@ -213,6 +283,16 @@
 <h3 id="김정우-입니다">김정우 입니다.</h3>
 
     </div>
+
+    <footer class="post-footer">
+        <div class="post-navigation">
+            
+            
+            
+            <a class="next" href="/2025/05/01/hello-python/">Python 이란 무엇인가. &raquo;</a>
+            
+        </div>
+    </footer>
 </article> 
         </main>
 
@@ -225,87 +305,62 @@
         
     </div>
 
-    <footer>
-        <p>&copy; 2025. Your Name</p>
-    </footer>
+    <footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2025. jowaka</p>
+        <p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener noreferrer">Jekyll</a></p>
+    </div>
+</footer> 
 
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 네비게이션 토글 기능
-            document.querySelectorAll('.toggle-btn').forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    const icon = this.querySelector('i');
-                    icon.classList.toggle('rotated');
-                    const content = this.closest('.nav-section').querySelector('.nav-section-content');
-                    content.classList.toggle('collapsed');
-                    const sectionId = this.closest('.nav-section').querySelector('h3').textContent;
-                    localStorage.setItem('nav-section-' + sectionId, content.classList.contains('collapsed') ? 'closed' : 'open');
-                });
-            });
-
-            // 저장된 네비게이션 상태 복원
-            document.querySelectorAll('.nav-section').forEach(function(section) {
-                const sectionId = section.querySelector('h3').textContent;
-                const savedState = localStorage.getItem('nav-section-' + sectionId);
-                const content = section.querySelector('.nav-section-content');
-                const icon = section.querySelector('.toggle-btn i');
-                if (savedState === 'open') {
-                    content.classList.remove('collapsed');
-                    icon.classList.add('rotated');
-                }
-            });
-
             // 목차 생성
-            if (document.querySelector('.post-content')) {
-                const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3');
-                const toc = document.querySelector('#toc');
-                if (toc && headings.length > 0) {
-                    const tocList = document.createElement('ul');
-                    tocList.className = 'toc-list';
+            const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3');
+            const toc = document.querySelector('#toc');
+            if (toc && headings.length > 0) {
+                const tocList = document.createElement('ul');
+                tocList.className = 'toc-list';
+                
+                headings.forEach((heading, index) => {
+                    heading.id = heading.id || `heading-${index}`;
+                    
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `#${heading.id}`;
+                    a.textContent = heading.textContent;
+                    a.className = `toc-${heading.tagName.toLowerCase()}`;
+                    
+                    a.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
+                    
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+                
+                toc.appendChild(tocList);
+
+                // 스크롤 이벤트로 현재 섹션 하이라이트
+                window.addEventListener('scroll', () => {
+                    const scrollPosition = window.scrollY;
                     
                     headings.forEach((heading, index) => {
-                        // ID 생성
-                        heading.id = heading.id || `heading-${index}`;
+                        const link = tocList.querySelector(`a[href="#${heading.id}"]`);
+                        if (!link) return;
                         
-                        // 목차 항목 생성
-                        const li = document.createElement('li');
-                        const a = document.createElement('a');
-                        a.href = `#${heading.id}`;
-                        a.textContent = heading.textContent;
-                        a.className = heading.tagName === 'H1' ? 'toc-h1' : 
-                                    heading.tagName === 'H2' ? 'toc-h2' : 'toc-h3';
+                        const nextHeading = headings[index + 1];
+                        const isActive = 
+                            scrollPosition >= heading.offsetTop - 100 && 
+                            (!nextHeading || scrollPosition < nextHeading.offsetTop - 100);
                         
-                        // 클릭 이벤트
-                        a.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        });
-                        
-                        li.appendChild(a);
-                        tocList.appendChild(li);
+                        link.classList.toggle('active', isActive);
                     });
-                    
-                    toc.appendChild(tocList);
-
-                    // 스크롤 이벤트로 현재 섹션 하이라이트
-                    window.addEventListener('scroll', () => {
-                        const scrollPosition = window.scrollY;
-                        
-                        headings.forEach((heading, index) => {
-                            const link = tocList.querySelector(`a[href="#${heading.id}"]`);
-                            if (!link) return;
-                            
-                            const nextHeading = headings[index + 1];
-                            const isActive = 
-                                scrollPosition >= heading.offsetTop - 100 && 
-                                (!nextHeading || scrollPosition < nextHeading.offsetTop - 100);
-                            
-                            link.classList.toggle('active', isActive);
-                        });
-                    });
-                }
+                });
             }
         });
     </script>
+    
 </body>
 </html> 
