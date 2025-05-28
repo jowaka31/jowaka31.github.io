@@ -4,48 +4,61 @@ title: Categories
 ---
 
 <div class="categories-page">
-    <div class="category-nav">
+    <div class="category-list">
         {% for category in site.categories %}
-        <button class="category-btn" data-category="{{ category[0] | downcase }}">
-            {{ category[0] }}
-            <span class="post-count">({{ category[1].size }})</span>
-        </button>
+            {% assign category_id = category[0] | slugify %}
+            <a href="?category={{ category_id }}" class="category-btn{% if category_id == page.category %} active{% endif %}" data-category="{{ category_id }}">
+                {{ category[0] }}
+                <span class="post-count">({{ category[1].size }})</span>
+            </a>
         {% endfor %}
     </div>
 
     {% for category in site.categories %}
-    <div class="category-section" id="category-{{ category[0] | downcase }}">
-        <h2 class="category-title">{{ category[0] }}</h2>
-        {% for post in category[1] %}
-        <article class="post-preview">
-            <h3 class="post-title">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            </h3>
-            <div class="post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    {{ post.date | date: "%Y-%m-%d" }}
-                </time>
-            </div>
-            <div class="post-excerpt">
-                {{ post.excerpt }}
-            </div>
-            <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
-        </article>
-        {% endfor %}
-    </div>
+        {% assign category_id = category[0] | slugify %}
+        <div class="category-section{% if category_id == page.category %} active{% endif %}" id="{{ category_id }}">
+            <h2>{{ category[0] }}</h2>
+            {% assign posts = category[1] | sort: 'date' | reverse %}
+            {% assign currentYear = "" %}
+            
+            {% for post in posts %}
+                {% assign postYear = post.date | date: "%Y" %}
+                
+                {% if currentYear != postYear %}
+                    {% if currentYear != "" %}
+                        </div>
+                    {% endif %}
+                    
+                    {% assign currentYear = postYear %}
+                    <div class="year-section">
+                        <h3>{{ postYear }}</h3>
+                {% endif %}
+                
+                <article class="post-item">
+                    <span class="post-date">{{ post.date | date: "%b %d" }}</span>
+                    <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+                </article>
+                
+                {% if forloop.last %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     {% endfor %}
 </div>
 
 <style>
 .categories-page {
-    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.category-nav {
-    margin-bottom: 2rem;
+.category-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .category-btn {
@@ -54,8 +67,10 @@ title: Categories
     background-color: #f1f3f5;
     border-radius: 20px;
     cursor: pointer;
-    transition: all 0.2s;
     color: #495057;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .category-btn:hover {
@@ -70,7 +85,6 @@ title: Categories
 
 .post-count {
     font-size: 0.9em;
-    color: inherit;
     opacity: 0.8;
 }
 
@@ -82,74 +96,69 @@ title: Categories
     display: block;
 }
 
-.category-title {
-    font-size: 2rem;
-    color: #212529;
+.year-section {
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #e9ecef;
 }
 
-.post-preview {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #e9ecef;
+.year-section h3 {
+    color: #495057;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
 }
 
-.post-preview:last-child {
-    border-bottom: none;
+.post-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.post-date {
+    color: #868e96;
+    font-size: 0.9rem;
+    min-width: 80px;
+}
+
+.post-link {
+    color: #495057;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    color: #228be6;
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const categoryBtns = document.querySelectorAll('.category-btn');
-    const categorySections = document.querySelectorAll('.category-section');
-    
     // URL에서 카테고리 파라미터 가져오기
     const urlParams = new URLSearchParams(window.location.search);
-    const selectedCategory = urlParams.get('category');
+    const categoryParam = urlParams.get('category');
     
-    function showCategory(categoryId) {
-        // 모든 섹션 숨기기
-        categorySections.forEach(section => {
-            section.classList.remove('active');
-        });
+    if (categoryParam) {
+        const targetSection = document.getElementById(categoryParam);
+        const targetBtn = document.querySelector(`[data-category="${categoryParam}"]`);
         
-        // 모든 버튼 비활성화
-        categoryBtns.forEach(btn => {
-            btn.classList.remove('active');
-        });
-        
-        // 선택된 카테고리 보여주기
-        const targetSection = document.getElementById('category-' + categoryId);
-        const targetBtn = document.querySelector(`[data-category="${categoryId}"]`);
-        
-        if (targetSection) {
+        if (targetSection && targetBtn) {
+            // 모든 섹션과 버튼의 active 클래스 제거
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // 선택된 카테고리 활성화
             targetSection.classList.add('active');
             targetBtn.classList.add('active');
         }
-        
-        // URL 업데이트
-        const newUrl = new URL(window.location);
-        newUrl.searchParams.set('category', categoryId);
-        window.history.pushState({}, '', newUrl);
-    }
-    
-    // 버튼 클릭 이벤트
-    categoryBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const categoryId = btn.dataset.category;
-            showCategory(categoryId);
-        });
-    });
-    
-    // 초기 카테고리 표시
-    if (selectedCategory) {
-        showCategory(selectedCategory);
-    } else if (categoryBtns.length > 0) {
-        // 첫 번째 카테고리 표시
-        showCategory(categoryBtns[0].dataset.category);
+    } else {
+        // 카테고리 파라미터가 없을 경우 첫 번째 카테고리 보여주기
+        const firstBtn = document.querySelector('.category-btn');
+        if (firstBtn) {
+            window.location.href = firstBtn.href;
+        }
     }
 });
 </script> 

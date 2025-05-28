@@ -1,3 +1,4 @@
+# Base
 title: jowaka31's blog
 description: 
 baseurl: ""
@@ -7,6 +8,39 @@ url: "https://jowaka31.github.io"
 lang: ko-KR
 timezone: Asia/Seoul
 encoding: UTF-8
+
+# Author information
+author:
+  name: jowaka
+  image: ./assets/images/jowaka31.png
+  bio : >
+    일반적인 것들에 대한 <br>
+    구체적인 이야기
+  social:
+    github: jowaka31
+    email: jowaka31@gmail.com
+
+# Navigation
+navigation:
+  
+  - title: Diary
+    children:
+      - Diary
+  
+  - title: Data
+    children:
+      - Machine Learning
+      - Deep Learning
+  
+  - title: Computer
+    children:
+      - Python
+      - Web 
+
+  - title: Etc
+    children:
+      - Etc
+
 
 # SEO settings
 twitter:
@@ -39,17 +73,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 permalink: /:year/:month/:day/:title/
 
-# Author information
-author:
-  name: jowaka
-  image: ./assets/images/jowaka31.png
-  bio : >
-    일반적인 것들에 대한 <br>
-    구체적인 이야기
-  social:
-    github: jowaka31
-    email: jowaka31@gmail.com
-
 # Build settings
 plugins:
   - jekyll-feed
@@ -80,24 +103,3 @@ defaults:
       path: ""
     values:
       image: /assets/images/jowaka31.jpg # 기본 썸네일 이미지
-
-# Navigation
-navigation:
-  
-  - title: Diary
-    children:
-      - Diary
-  
-  - title: Data
-    children:
-      - Machine Learning
-      - Deep Learning
-  
-  - title: Computer
-    children:
-      - Python
-      - Web 
-
-  - title: Etc
-    children:
-      - Etc

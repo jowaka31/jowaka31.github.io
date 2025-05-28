@@ -19,4 +19,28 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // 메뉴 토글 기능
+    const navSections = document.querySelectorAll('.nav-section-header');
+    
+    navSections.forEach(section => {
+        section.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            content.classList.toggle('collapsed');
+        });
+    });
+
+    // 페이지 전환 효과
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href').startsWith('/')) {
+                e.preventDefault();
+                document.querySelector('.content').classList.add('loading');
+                
+                setTimeout(() => {
+                    window.location = this.href;
+                }, 300);
+            }
+        });
+    });
 }); 
