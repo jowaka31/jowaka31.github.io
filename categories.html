@@ -1,0 +1,155 @@
+---
+layout: default
+title: Categories
+---
+
+<div class="categories-page">
+    <div class="category-nav">
+        {% for category in site.categories %}
+        <button class="category-btn" data-category="{{ category[0] | downcase }}">
+            {{ category[0] }}
+            <span class="post-count">({{ category[1].size }})</span>
+        </button>
+        {% endfor %}
+    </div>
+
+    {% for category in site.categories %}
+    <div class="category-section" id="category-{{ category[0] | downcase }}">
+        <h2 class="category-title">{{ category[0] }}</h2>
+        {% for post in category[1] %}
+        <article class="post-preview">
+            <h3 class="post-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            <div class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%Y-%m-%d" }}
+                </time>
+            </div>
+            <div class="post-excerpt">
+                {{ post.excerpt }}
+            </div>
+            <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+        </article>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+.categories-page {
+    padding: 2rem 0;
+}
+
+.category-nav {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.category-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #f1f3f5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #495057;
+}
+
+.category-btn:hover {
+    background-color: #e7f5ff;
+    color: #228be6;
+}
+
+.category-btn.active {
+    background-color: #228be6;
+    color: white;
+}
+
+.post-count {
+    font-size: 0.9em;
+    color: inherit;
+    opacity: 0.8;
+}
+
+.category-section {
+    display: none;
+}
+
+.category-section.active {
+    display: block;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: #212529;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.post-preview {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.post-preview:last-child {
+    border-bottom: none;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const categorySections = document.querySelectorAll('.category-section');
+    
+    // URL에서 카테고리 파라미터 가져오기
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedCategory = urlParams.get('category');
+    
+    function showCategory(categoryId) {
+        // 모든 섹션 숨기기
+        categorySections.forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // 모든 버튼 비활성화
+        categoryBtns.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // 선택된 카테고리 보여주기
+        const targetSection = document.getElementById('category-' + categoryId);
+        const targetBtn = document.querySelector(`[data-category="${categoryId}"]`);
+        
+        if (targetSection) {
+            targetSection.classList.add('active');
+            targetBtn.classList.add('active');
+        }
+        
+        // URL 업데이트
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set('category', categoryId);
+        window.history.pushState({}, '', newUrl);
+    }
+    
+    // 버튼 클릭 이벤트
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const categoryId = btn.dataset.category;
+            showCategory(categoryId);
+        });
+    });
+    
+    // 초기 카테고리 표시
+    if (selectedCategory) {
+        showCategory(selectedCategory);
+    } else if (categoryBtns.length > 0) {
+        // 첫 번째 카테고리 표시
+        showCategory(categoryBtns[0].dataset.category);
+    }
+});
+</script> 

@@ -79,18 +79,25 @@ defaults:
     scope:
       path: ""
     values:
-      image: /assets/images/default-thumb.jpg # 기본 썸네일 이미지
+      image: /assets/images/jowaka31.jpg # 기본 썸네일 이미지
 
 # Navigation
 navigation:
+  
   - title: Diary
     children:
       - Diary
+  
   - title: Data
     children:
       - Machine Learning
       - Deep Learning
-  - title: Development
+  
+  - title: Computer
     children:
       - Python
       - Web 
+
+  - title: Etc
+    children:
+      - Etc

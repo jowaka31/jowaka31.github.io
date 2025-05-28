@@ -7,7 +7,7 @@ categories: [Diary]
 
 This is my first blog post! I'll be sharing my thoughts and experiences here.
 
-## What to expect
+# What to expect
 
 * Technical articles
 * Personal experiences

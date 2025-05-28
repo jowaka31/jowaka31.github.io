@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jowaka31's blog</title>
+    <title>Categories - jowaka31's blog</title>
     <meta name="description" content="일반적인 것들에 대한 <br> 구체적인 이야기.
 ">
     
@@ -15,7 +15,7 @@
     
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/categories/">
     <link rel="alternate" type="application/rss+xml" title="jowaka31's blog" href="/feed.xml">
 </head> 
 <body>
@@ -174,65 +174,207 @@ document.addEventListener('DOMContentLoaded', function() {
         </aside>
 
         <main class="content">
-            <div class="home">
-    
-    <article class="post-preview">
-        <h2 class="post-title">
-            <a href="/2025/05/01/hello-python/">Python 이란 무엇인가.</a>
-        </h2>
-        <div class="post-meta">
-            <time datetime="2025-05-01T00:00:00+09:00">
-                01 May 2025
-            </time>
-            
-            <div class="post-categories">
-                
-                <a class="category-tag" href="/category/python">Python</a>
-                
-            </div>
-            
-        </div>
-    </article>
-    
-    <article class="post-preview">
-        <h2 class="post-title">
-            <a href="/2025/03/30/welcome-to-my-blog/">Welcome to My Blog</a>
-        </h2>
-        <div class="post-meta">
-            <time datetime="2025-03-30T00:00:00+09:00">
-                30 Mar 2025
-            </time>
-            
-            <div class="post-categories">
-                
-                <a class="category-tag" href="/category/diary">Diary</a>
-                
-            </div>
-            
-        </div>
-    </article>
-    
-    <article class="post-preview">
-        <h2 class="post-title">
-            <a href="/1998/07/31/life/">Life</a>
-        </h2>
-        <div class="post-meta">
-            <time datetime="1998-07-31T00:00:00+09:00">
-                31 Jul 1998
-            </time>
-            
-            <div class="post-categories">
-                
-                <a class="category-tag" href="/category/diary">Diary</a>
-                
-            </div>
-            
-        </div>
-    </article>
-    
+            <div class="categories-page">
+    <div class="category-nav">
+        
+        <button class="category-btn" data-category="diary">
+            Diary
+            <span class="post-count">(2)</span>
+        </button>
+        
+        <button class="category-btn" data-category="python">
+            Python
+            <span class="post-count">(1)</span>
+        </button>
+        
+    </div>
 
     
-</div> 
+    <div class="category-section" id="category-diary">
+        <h2 class="category-title">Diary</h2>
+        
+        <article class="post-preview">
+            <h3 class="post-title">
+                <a href="/2025/03/30/welcome-to-my-blog/">Welcome to My Blog</a>
+            </h3>
+            <div class="post-meta">
+                <time datetime="2025-03-30T00:00:00+09:00">
+                    2025-03-30
+                </time>
+            </div>
+            <div class="post-excerpt">
+                <p>This is my first blog post! I’ll be sharing my thoughts and experiences here.</p>
+
+            </div>
+            <a href="/2025/03/30/welcome-to-my-blog/" class="read-more">Read More →</a>
+        </article>
+        
+        <article class="post-preview">
+            <h3 class="post-title">
+                <a href="/1998/07/31/life/">Life</a>
+            </h3>
+            <div class="post-meta">
+                <time datetime="1998-07-31T00:00:00+09:00">
+                    1998-07-31
+                </time>
+            </div>
+            <div class="post-excerpt">
+                <h1 id="199807---199906">1998.07 - 1999.06</h1>
+<ul>
+  <li>[부산-영도구]에서 태어났다.</li>
+  <li>이후 [서울-강동구]로 이동했다.
+    <ul>
+      <li>특별한 기억은 없다.</li>
+    </ul>
+  </li>
+</ul>
+
+            </div>
+            <a href="/1998/07/31/life/" class="read-more">Read More →</a>
+        </article>
+        
+    </div>
+    
+    <div class="category-section" id="category-python">
+        <h2 class="category-title">Python</h2>
+        
+        <article class="post-preview">
+            <h3 class="post-title">
+                <a href="/2025/05/01/hello-python/">Python 이란 무엇인가.</a>
+            </h3>
+            <div class="post-meta">
+                <time datetime="2025-05-01T00:00:00+09:00">
+                    2025-05-01
+                </time>
+            </div>
+            <div class="post-excerpt">
+                <h1 id="python">Python?</h1>
+
+            </div>
+            <a href="/2025/05/01/hello-python/" class="read-more">Read More →</a>
+        </article>
+        
+    </div>
+    
+</div>
+
+<style>
+.categories-page {
+    padding: 2rem 0;
+}
+
+.category-nav {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.category-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #f1f3f5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #495057;
+}
+
+.category-btn:hover {
+    background-color: #e7f5ff;
+    color: #228be6;
+}
+
+.category-btn.active {
+    background-color: #228be6;
+    color: white;
+}
+
+.post-count {
+    font-size: 0.9em;
+    color: inherit;
+    opacity: 0.8;
+}
+
+.category-section {
+    display: none;
+}
+
+.category-section.active {
+    display: block;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: #212529;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.post-preview {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.post-preview:last-child {
+    border-bottom: none;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const categorySections = document.querySelectorAll('.category-section');
+    
+    // URL에서 카테고리 파라미터 가져오기
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedCategory = urlParams.get('category');
+    
+    function showCategory(categoryId) {
+        // 모든 섹션 숨기기
+        categorySections.forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // 모든 버튼 비활성화
+        categoryBtns.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // 선택된 카테고리 보여주기
+        const targetSection = document.getElementById('category-' + categoryId);
+        const targetBtn = document.querySelector(`[data-category="${categoryId}"]`);
+        
+        if (targetSection) {
+            targetSection.classList.add('active');
+            targetBtn.classList.add('active');
+        }
+        
+        // URL 업데이트
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set('category', categoryId);
+        window.history.pushState({}, '', newUrl);
+    }
+    
+    // 버튼 클릭 이벤트
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const categoryId = btn.dataset.category;
+            showCategory(categoryId);
+        });
+    });
+    
+    // 초기 카테고리 표시
+    if (selectedCategory) {
+        showCategory(selectedCategory);
+    } else if (categoryBtns.length > 0) {
+        // 첫 번째 카테고리 표시
+        showCategory(categoryBtns[0].dataset.category);
+    }
+});
+</script> 
         </main>
 
         

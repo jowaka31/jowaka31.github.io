@@ -11,8 +11,7 @@
         <ul class="nav-section-content collapsed">
             {% for child in item.children %}
             <li>
-                {% assign child_url = '/category/' | append: child | downcase | replace: ' ', '-' %}
-                <a href="{{ child_url | relative_url }}">{{ child }}</a>
+                <a href="/categories?category={{ child | downcase | replace: ' ', '-' }}">{{ child }}</a>
             </li>
             {% endfor %}
         </ul>

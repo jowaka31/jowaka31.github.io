@@ -321,7 +321,6 @@ footer {
 }
 
 .toc-list {
-    counter-reset: section;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -332,45 +331,29 @@ footer {
 }
 
 .toc-h1 {
-    counter-increment: section;
-    counter-reset: subsection;
-}
-
-.toc-h1::before {
-    content: counter(section) ". ";
+    font-weight: 600;
 }
 
 .toc-h2 {
-    counter-increment: subsection;
-    counter-reset: subsubsection;
     margin-left: 1.5rem;
 }
 
-.toc-h2::before {
-    content: counter(section) "." counter(subsection) " ";
-}
-
 .toc-h3 {
-    counter-increment: subsubsection;
     margin-left: 3rem;
 }
 
-.toc-h3::before {
-    content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+.toc-h1, .toc-h2, .toc-h3 {
+    color: #495057;
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s;
 }
 
-.toc-h2:hover,
-.toc-h3:hover {
+.toc-h1:hover, .toc-h2:hover, .toc-h3:hover {
     color: #228be6;
 }
 
-.toc-h2.active,
-.toc-h3.active {
-    color: #228be6;
-    font-weight: 500;
-}
-
-.toc-h1.active {
+.toc-h1.active, .toc-h2.active, .toc-h3.active {
     color: #228be6;
     font-weight: 700;
 }
@@ -646,4 +629,5 @@ footer {
 .highlight .vc { color: #228be6 } /* Name.Variable.Class */
 .highlight .vg { color: #228be6 } /* Name.Variable.Global */
 .highlight .vi { color: #228be6 } /* Name.Variable.Instance */
+.highlight .il { color: #be4bdb } /* Literal.Number.Integer.Long */ 
 .highlight .il { color: #be4bdb } /* Literal.Number.Integer.Long */ 
