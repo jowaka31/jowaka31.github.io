@@ -1,7 +1,5 @@
 title: jowaka31's blog
-description: > 
-  일반적인 것들에 대한 <br>
-  구체적인 이야기.
+description: 
 baseurl: ""
 url: "https://jowaka31.github.io"
 
@@ -45,7 +43,9 @@ permalink: /:year/:month/:day/:title/
 author:
   name: jowaka
   image: ./assets/images/jowaka31.png
-  bio: 일반적인 것들에 대한 구체적인 이야기를 기록합니다.
+  bio : >
+    일반적인 것들에 대한 <br>
+    구체적인 이야기
   social:
     github: jowaka31
     email: jowaka31@gmail.com

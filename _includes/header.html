@@ -8,13 +8,13 @@
         </a>
     </nav>
     <div class="profile">
+        <h1 class="site-title">{{ site.title }}</h1>
+        <p class="site-description">{{ site.description }}</p>
         {% if site.author.image %}
         <div class="profile-image">
             <img src="{{ site.author.image | relative_url }}" alt="{{ site.author.name }}">
         </div>
         {% endif %}
-        <h1 class="site-title">{{ site.title }}</h1>
-        <p class="site-description">{{ site.description }}</p>
         <div class="author-info">
             <h2>{{ site.author.name }}</h2>
             <p>{{ site.author.bio }}</p>
