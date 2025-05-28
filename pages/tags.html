@@ -1,0 +1,33 @@
+---
+layout: page
+title: 태그
+permalink: /tags/
+---
+
+<div class="tags-page">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+    <div class="tag-group">
+        <h3 id="{{ tag[0] | slugify }}" class="tag-title">{{ tag[0] }}</h3>
+        <ul class="post-list">
+            {% for post in tag[1] %}
+            <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <span class="post-meta">
+                    {{ post.date | date: "%Y년 %m월 %d일" }}
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="tag-cloud">
+    <h2>태그 클라우드</h2>
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] | slugify }}" class="tag-cloud-item" style="font-size: {{ tag[1].size | times: 4 | plus: 80 }}%">
+        {{ tag[0] }}
+    </a>
+    {% endfor %}
+</div> 

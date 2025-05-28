@@ -3,7 +3,25 @@ description: >
   일반적인 것들에 대한 <br>
   구체적인 이야기.
 baseurl: ""
-url: ""
+url: "https://jowaka31.github.io"
+
+# Site settings
+lang: ko-KR
+timezone: Asia/Seoul
+encoding: UTF-8
+
+# SEO settings
+twitter:
+  username: jowaka31
+  card: summary
+social:
+  name: jowaka
+  links:
+    - https://github.com/jowaka31
+    - mailto:jowaka31@gmail.com
+
+# Analytics
+google_analytics: # your Google Analytics tracking ID
 
 # Build settings
 markdown: kramdown
@@ -23,6 +41,46 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 permalink: /:year/:month/:day/:title/
 
+# Author information
+author:
+  name: jowaka
+  image: ./assets/images/jowaka31.png
+  bio: 일반적인 것들에 대한 구체적인 이야기를 기록합니다.
+  social:
+    github: jowaka31
+    email: jowaka31@gmail.com
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-minifier
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Minifier settings
+jekyll-minifier:
+  compress_css: true
+  compress_javascript: true
+  exclude: ['*.xml']
+
+# Feed settings
+feed:
+  path: feed.xml
+  posts_limit: 20
+
+# Sitemap settings
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /assets/images/default-thumb.jpg # 기본 썸네일 이미지
+
 # Navigation
 navigation:
   - title: Diary
@@ -35,21 +93,4 @@ navigation:
   - title: Development
     children:
       - Python
-      - Web
-
-# Author information
-author:
-  name: jowaka
-  image: ./assets/images/jowaka31.png
-  social:
-    github: jowaka31
-    email: jowaka31@gmail.com
-
-# Build settings
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-
-paginate: 5
-paginate_path: "/page:num/" 
+      - Web 

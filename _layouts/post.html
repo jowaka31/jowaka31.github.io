@@ -30,6 +30,25 @@ layout: default
         {{ content }}
     </div>
 
+    <!-- Giscus 댓글 시스템 -->
+    <div class="comments">
+        <script src="https://giscus.app/client.js"
+            data-repo="jowaka31/jowaka31.github.io_comment"
+            data-repo-id="R_kgDOOxs-vw"
+            data-category="General"
+            data-category-id="DIC_kwDOOxs-v84CqqcK"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            data-lang="ko"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+
     <footer class="post-footer">
         <div class="post-navigation">
             {% if page.previous.url %}
