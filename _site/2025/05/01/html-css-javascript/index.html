@@ -3,8 +3,8 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life - jowaka31's blog</title>
-    <meta name="description" content="1998.07 - 1999.06  [부산-영도구]에서 태어났다.  이후 [서울-강동구]로 이동했다.          특별한 기억은 없다.      ">
+    <title>HTML-CSS-JavaScript를 맛보고 느낀점 - jowaka31's blog</title>
+    <meta name="description" content="웹을 공부해보았다.">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -14,7 +14,7 @@
     
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="canonical" href="http://localhost:4000/1998/07/31/life/">
+    <link rel="canonical" href="http://localhost:4000/2025/05/01/html-css-javascript/">
     <link rel="alternate" type="application/rss+xml" title="jowaka31's blog" href="/feed.xml">
 </head> 
 <body>
@@ -181,15 +181,15 @@ document.addEventListener('DOMContentLoaded', function() {
         <main class="content">
             <article class="post">
     <header class="post-header">
-        <h1 class="post-title">Life</h1>
+        <h1 class="post-title">HTML-CSS-JavaScript를 맛보고 느낀점</h1>
         <div class="post-meta">
-            <time datetime="1998-07-31T00:00:00+09:00">
-                31 Jul 1998
+            <time datetime="2025-05-01T00:00:00+09:00">
+                01 May 2025
             </time>
             
             in
             
-            <a href="/category/etc">Etc</a>
+            <a href="/category/web">Web</a>
             
             
             
@@ -199,307 +199,166 @@ document.addEventListener('DOMContentLoaded', function() {
     </header>
 
     <div class="post-content">
-        <h1 id="199807---199906">1998.07 - 1999.06</h1>
-<ul>
-  <li>[부산-영도구]에서 태어났다.</li>
-  <li>이후 [서울-강동구]로 이동했다.
-    <ul>
-      <li>특별한 기억은 없다.</li>
-    </ul>
-  </li>
-</ul>
+        <h1 id="웹을-공부해보았다">웹을 공부해보았다.</h1>
 
-<hr />
+<p>정확히 제가 공부한 것을 웹이라고 해야할지도 잘 모르겠습니다 ㅎㅎㅎ.</p>
 
-<h1 id="199906---200302">1999.06 - 2003.02</h1>
-<ul>
-  <li>[서울-강동구]에서 [경기-광주]로 이동했다.
-    <ul>
-      <li>경기-광주부터는 기억이 있다.</li>
-    </ul>
-  </li>
-</ul>
+<p>일단은 <mark>HTML</mark>과 <mark>CSS</mark> 그리고 <mark>javascript</mark>를 간략하게 공부해보며 새로운 언어를 학습하는 시간을 가졌습니다.</p>
 
-<hr />
+<p>제가 이해한 바를 바탕으로 간단히 이 3가지 언어의 관계를 살펴보겠습니다.</p>
 
-<h1 id="200302---200503">2003.02 - 2005.03</h1>
-<ul>
-  <li>한솔유치원을 다녔다.
-    <ul>
-      <li>종이 비행기를 잘 만들었던 기억이 있다.</li>
-    </ul>
-  </li>
-</ul>
+<h2 id="html">HTML</h2>
+<p><mark>HTML</mark>은 웹에서 다양한 요소들을 보여주게 하는 언어입니다.</p>
 
-<hr />
+<p>이 언어를 통해서 우리는 웹 상에서 어떤 글자, 이미지, 영상을 보여줄지 선택할 수 있습니다.</p>
 
-<h1 id="200503---201103">2005.03 - 2011.03</h1>
-<ul>
-  <li>[태전초등학교]를 다녔다.
-    <ul>
-      <li>시끄럽고 호전적인 아이였다.</li>
-      <li>스포츠도 좋아하고 싸움도 꽤나 잘했던 것으로 기억한다.</li>
-      <li>무리지어 다니는 것을 좋아하지는 않았지만, 같이 놀거리가 있으면 잘 어울려 다녔다.</li>
-      <li>조금 이기적인 성향이 있었지만 그 나이에 맞는 아이였던 것 같다.</li>
-    </ul>
-  </li>
-</ul>
+<h3 id="간단한-html-코드">간단한 HTML 코드</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="c">&lt;!-- heading / paragraph / img / video를 보여주는 html 코드 --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 
-<hr />
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
 
-<h1 id="201103---201403">2011.03 - 2014.03</h1>
-<ul>
-  <li>[광남중학교]를 다녔다.
-    <ul>
-      <li>조금 더 조용해졌고, 이기적인 성향도 좀 줄어든 것으로 기억한다.</li>
-      <li>스포츠, PC방, 노래방 등 다양한 활동을 했다.</li>
-      <li>무언가에 엄청난 열정을 쏟았던 기억은 없지만 공부는 괜찮게 했다.</li>
-    </ul>
-  </li>
-</ul>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>This is Heading<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is Paragraph<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://i.imgur.com/QUqjHmR.jpeg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">"https://i.imgur.com/0eRZGrJ.mp4"</span> <span class="na">controls</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 
-<hr />
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-<h1 id="201403---201703">2014.03 - 2017.03</h1>
-<ul>
-  <li>기숙사 생활을 하여, [경기-광주]에서 [경북-김천]으로 이동했다.</li>
-  <li>[김천고등학교]를 다녔다.
-    <ul>
-      <li>많은 스트레스를 받았다. (대입 압박감, 기숙사 생활, 사회와 단절된 기분 등등…)</li>
-      <li>하지만 그만큼 즐거운 추억도 많은 경험이었다.</li>
-      <li>멋진 친구들을 많이 알게되었다.</li>
-      <li>이 시기에 삶에 대한 태도가 어느정도 정립이 된 것 같다.</li>
-    </ul>
-  </li>
-</ul>
+<p>다양한 태그를 필요로 하는 언어입니다.</p>
 
-<hr />
+<p>하지만 그만큼 단순하여 다양한 자동완성이 있어 실제로 작성하는데 큰 무리가 있지는 않았습니다.</p>
 
-<h1 id="201703---202103">2017.03 - 2021.03</h1>
-<ul>
-  <li>[광운대학교-전자바이오물리학과]를 다녔다.
-    <ul>
-      <li>풍물 동아리에서 활동을 했다.
-        <ul>
-          <li>다양한 사람들을 만나며 교류했다.</li>
-          <li>이 때의 경험으로 어떤 상황에서도 크게 불편함을 느끼지 않는 것 같다.</li>
-        </ul>
-      </li>
-      <li>물리학에 큰 흥미와 열정을 가지고 공부했다.
-        <ul>
-          <li>이후 이 자산을 바탕으로 [광운대학교-전자공학과-전과]과 [서울시립대-물리학과-편입]을 성공했다.</li>
-          <li>최종적으로 [서울시립대-물리학과-편입]을 선택했다.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<h2 id="css">CSS</h2>
+<p><mark>CSS</mark>는 HTML을 꾸며주는 언어입니다.</p>
 
-<hr />
+<p>사실 언어라기 보다는 다양한 세팅값들의 모음 느낌으로 받아들여 졌습니다.</p>
 
-<h1 id="201809---202004">2018.09 - 2020.04</h1>
-<ul>
-  <li>[육군]에서 복무한다.
-    <ul>
-      <li>원래도 일찍자고 일찍 일어나는 것을 선호했지만 이때 생활습관이 완전 정착되었다.</li>
-      <li>특급전사를 취득하고 웨이트 트레이닝에 흥미를 붙였다.</li>
-      <li>다양한 삶의 방식을 보며 앞으로 어떻게 살 것인가 고민했다.</li>
-      <li>편입을 위한 공부를 했다.</li>
-    </ul>
-  </li>
-</ul>
+<p>HTML과 굉장히 밀접하게 정보를 주고 받는 것으로 이해했습니다.</p>
 
-<hr />
+<h3 id="간단한-css-코드">간단한 CSS 코드</h3>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c">/* main-color와 default-size를 정의한다. */</span>
+<span class="nc">.main-color</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
 
-<h1 id="202103---202308">2021.03 - 2023.08</h1>
-<ul>
-  <li>[서울시립대학교-물리학과]를 다녔다.
-    <ul>
-      <li>물리학과 연구실에서 처음 데이터 사이언스를 접한다.
-        <ul>
-          <li>이걸 하면서 살고 싶다는 생각을 했다.</li>
-          <li>혼자서 많은 것들을 할 수 있는 기술이라고 생각했다.</li>
-        </ul>
-      </li>
-      <li>통계학과를 복수전공 한다.</li>
-    </ul>
-  </li>
-</ul>
+<span class="nc">.default-size</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-<hr />
+<p>이러한 CSS 코드는 HTML에서 불러와서 사용하는 것이 가능합니다.</p>
 
-<h1 id="202107---202203">2021.07 - 2022.03</h1>
-<ul>
-  <li>[서울시립대-물리학과-2차원물질연구소]를 다녔다.
-    <ul>
-      <li>프로그래밍과 데이터 엔지니어링에 입문한다.</li>
-      <li>나와 잘 맞는다고 느꼈다. 좋은 코드가 잘 풀어낸 물리 답안지와 비슷하다고 느꼈다.</li>
-    </ul>
-  </li>
-</ul>
+<h3 id="html에서-활용">HTML에서 활용</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 
-<hr />
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- CSS를 불러오는 코드. --&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
 
-<h1 id="202206">2022.06</h1>
-<ul>
-  <li>ADsP 데이터분석 준전문가 자격증을 취득한다.</li>
-  <li>SQLD SQL 개발자 자격증을 취득한다.</li>
-</ul>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"main-color"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- class를 css 값으로 설정한다. --&gt;</span>
+        This is Heading
+        <span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"main-color"</span><span class="nt">&gt;</span>This is Paragraph<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"default-size"</span> <span class="na">src=</span><span class="s">"https://i.imgur.com/QUqjHmR.jpeg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;video</span> <span class="na">class=</span><span class="s">"default-size"</span> <span class="na">src=</span><span class="s">"https://i.imgur.com/0eRZGrJ.mp4"</span> <span class="na">controls</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 
-<hr />
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-<h1 id="202208">2022.08</h1>
-<ul>
-  <li>TOEIC 915를 취득한다.</li>
-</ul>
+<h2 id="javascript">Javascript</h2>
+<p><mark>javascript</mark>는 웹브라우저가 default로 이해할 수 있는 언어로 이해했습니다.</p>
 
-<hr />
+<p>그렇기 때문에 javascript 코드를 통해서 웹 상에서 데이터를 주고 받는것이 가능하다고 느꼈습니다.</p>
 
-<h1 id="202209---202303">2022.09 - 2023.03</h1>
-<ul>
-  <li>[SK-Planet T-Academy 빅데이터 분석가 1기] 과정을 다녔다.
-    <ul>
-      <li>혼자서만 작업을 하다가 한번 쯤 커리큘럼을 쭉 듣는 것이 좋을 것 같아서 이수했다.</li>
-      <li>기업연계프로젝트에서 많이 배웠다.</li>
-    </ul>
-  </li>
-</ul>
+<p>로그인, 검색과 같은 작업을 수행할 때 backend와 정보를 주고 받아야하는 상황에서 javascript는 활용하기 굉장히 용이한 것으로 이해했습니다.</p>
 
-<hr />
+<h3 id="javascript의-특징">javascript의 특징</h3>
 
-<h1 id="202212">2022.12</h1>
-<ul>
-  <li>빅데이터 분석기사 자격증을 취득한다.</li>
-</ul>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c1">// javascript를 간단히 Hello, World를 출력</span>
+<span class="kd">let</span> <span class="nx">language</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">javascript</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">language</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-<hr />
+<p>javascript는 웹 브라우저가 이해할 수 있는 언어이기에 <mark>front-end</mark> 언어로 쓰였습니다.</p>
 
-<h1 id="202301---202306">2023.01 - 2023.06</h1>
-<ul>
-  <li>[달리셔스]를 다녔다.
-    <ul>
-      <li>데이터 웨어하우스를 구축하는 경험</li>
-      <li>백엔드를 공부하고 구현하는 경험</li>
-      <li>ML 모델 배포 및 백오피스를 구현하는 경험</li>
-      <li>실사용 유저가 있는 프로그램을 개발하는 경험</li>
-      <li>등등 정말 많이 배웠다.</li>
-    </ul>
-  </li>
-  <li>[SK-Planet T-Academy 빅데이터 분석가 1기]의 [기업연계프로젝트-우수상]을 수상했다.</li>
-</ul>
+<p>하지만 <mark>node</mark>라는 것이 나온 후 브라우저 밖에서도 실행이 가능해졌습니다.</p>
 
-<hr />
+<p>즉, 일반적인 프로그래밍 언어와 같이 동작할 수 있게 되었고 이후에 <mark>backend</mark>라이브러리와 같은것이 생겨난 것으로 이해했습니다.</p>
 
-<h1 id="202307---202311">2023.07 - 2023.11</h1>
-<ul>
-  <li>[한국거래소 제2회 알고리즘 주식투자 경진대회]에서 [장려상 / 한국거래소 이사장 표창장]를 수상한다.
-    <ul>
-      <li>처음으로 수상한 어느정도 네이밍이 있는 대회</li>
-      <li>알고리즘 트레이딩에 왕도가 없기에 내가 생각하는 논리를 집중해서 구현하는 경험을 할 수 있었다.</li>
-      <li>처음으로 python library를 구축 배포했다.</li>
-      <li>처음으로 open-source에 기여했다.</li>
-    </ul>
-  </li>
-</ul>
+<h2 id="결론">결론</h2>
+<p>저는 <mark>Python</mark>을 주력으로 활용하고 <mark>R</mark>과 <mark>SAS</mark> <mark>SQL</mark>을 이해할 수 있습니다.</p>
 
-<hr />
+<p>간단히 javascript를 공부하며 느낀점은 굉장히 매력적인 언어라는 생각이 들었습니다.</p>
 
-<h1 id="202402---202405">2024.02 - 2024.05</h1>
-<ul>
-  <li>[IBM Professional Data-Science] 과정을 이수한다.</li>
-  <li>[IBM Professional Data-Engineer] 과정을 이수한다.</li>
-</ul>
+<p>python도 언어가 굉장히 유연한 편이지만 <mark>그것보다 더 유연한 점</mark>도 있다고 생각했습니다.</p>
 
-<hr />
-
-<h1 id="202403">2024.03</h1>
-<ul>
-  <li>OPIC - IH를 취득한다.</li>
-</ul>
-
-<hr />
-
-<h1 id="202404---202407">2024.04 - 2024.07</h1>
-<ul>
-  <li>[ELICE]에서 AI부분의 강의를 진행한다.
-    <ul>
-      <li>컴퓨터 구조와 리눅스, 도커와 네트워크, python과 데이터 강의를 진행했다.</li>
-      <li>스스로 부족한 부분을 명확히 이해하고 내가 아는 것을 명확하게 전달하는 능력을 배운 것 같다.</li>
-      <li>즐거운 경험이었다.</li>
-    </ul>
-  </li>
-</ul>
-
-<hr />
-
-<h1 id="202405---202408">2024.05 - 2024.08</h1>
-<ul>
-  <li>[2024 날씨 빅데이터 콘테스트]에서 [최우수상 / 환경부장관상]을 수상한다.
-    <ul>
-      <li>백엔드, 임베디드 개발자와 기상 연구원과 팀을 이뤄 나간 대회
-        <ul>
-          <li>각 개발자의 특성에 따른 코드를 보는 것이 인상적이었다.</li>
-          <li>사회에서 통하는 보고서의 수준에 굉장히 놀랐다.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<hr />
-
-<h1 id="202407">2024.07</h1>
-<ul>
-  <li>TOEIC 910을 취득한다.</li>
-</ul>
-
-<hr />
-
-<h1 id="202407---202409">2024.07 - 2024.09</h1>
-<ul>
-  <li>[농넷 활용사례 수기공모전]에서 [소비부문 / 장려상]을 수상한다.
-    <ul>
-      <li>기상청 대회 수상후 가볍게 사이드로 진행했다.</li>
-      <li>대회 때 고민한 아이디어 중 하나를 간단히 정리하여 제출하고 수상했다.</li>
-    </ul>
-  </li>
-</ul>
-
-<hr />
-
-<h1 id="202410---202411">2024.10 - 2024.11</h1>
-<ul>
-  <li>[데이터-AI를 활용한 물가 예측 경진대회]에서 [우수상 / 한국인공지능학회장상]을 수상한다.
-    <ul>
-      <li>도매시장, 소매시장, 기상, 해외 수출입 등 다양한 데이터를 바탕으로 여러가지 농산물 가격을 예측하는 대회.</li>
-      <li>시계열 데이터를 다루는 것을 좋아하는 만큼 즐겁게 작업했다.</li>
-      <li>본선에서는 [2024-대한민국-정부박람회]에서 직접 모델 논리를 발표하는 경험을 했다.
-        <ul>
-          <li>처음 간 광주의 음식은 맛있었다.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<hr />
-
-<h1 id="202501">2025.01</h1>
-<ul>
-  <li>IETLS 7.0을 취득한다.</li>
-</ul>
-
-<hr />
-
-<h1 id="202505">2025.05</h1>
-<ul>
-  <li>[University of New South Wales]와 [Univerity of Queensland] 대학교 데이터 사이언스 석사과정에 합격한다.
-    <ul>
-      <li>[University of New South Wales] 진학을 결정한다.</li>
-    </ul>
-  </li>
-</ul>
-
+<p>앞으로 javascript를 조금 더 공부해보고 싶습니다.</p>
 
     </div>
 
@@ -525,9 +384,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <footer class="post-footer">
         <div class="post-navigation">
             
+            <a class="prev" href="/2025/05/01/hello-python/">&laquo; Python 이란 무엇인가.</a>
             
             
-            <a class="next" href="/2025/03/30/welcome-to-my-blog/">Welcome to My Blog &raquo;</a>
             
         </div>
     </footer>

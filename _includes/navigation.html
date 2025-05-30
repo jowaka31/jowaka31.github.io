@@ -8,10 +8,14 @@
             </button>
         </div>
         {% if item.children %}
-        <ul class="nav-section-content collapsed">
+        <ul class="nav-section-content">
             {% for child in item.children %}
             <li>
-                <a href="/categories?category={{ child | downcase | replace: ' ', '-' }}">{{ child }}</a>
+                <a href="/categories?category={{ child | downcase | replace: ' ', '-' }}">
+                    {{ child }}
+                    {% assign category_posts = site.categories[child] | default: empty_array %}
+                    <span class="post-count">({{ category_posts.size | default: 0 }})</span>
+                </a>
             </li>
             {% endfor %}
         </ul>
@@ -34,16 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 저장된 네비게이션 상태 복원
+    // 모든 섹션을 기본적으로 열어둡니다
     document.querySelectorAll('.nav-section').forEach(function(section) {
-        const sectionId = section.querySelector('h3').textContent;
-        const savedState = localStorage.getItem('nav-section-' + sectionId);
         const content = section.querySelector('.nav-section-content');
         const icon = section.querySelector('.toggle-btn i');
-        if (savedState === 'open') {
-            content.classList.remove('collapsed');
-            icon.classList.add('rotated');
-        }
+        content.classList.remove('collapsed');
+        icon.classList.add('rotated');
     });
 });
 </script> 

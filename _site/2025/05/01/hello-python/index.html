@@ -63,38 +63,28 @@
     
     <div class="nav-section">
         <div class="nav-section-header">
-            <h3>Diary</h3>
-            <button class="toggle-btn" aria-label="Toggle Diary menu">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-        
-        <ul class="nav-section-content collapsed">
-            
-            <li>
-                <a href="/categories?category=diary">Diary</a>
-            </li>
-            
-        </ul>
-        
-    </div>
-    
-    <div class="nav-section">
-        <div class="nav-section-header">
             <h3>Data</h3>
             <button class="toggle-btn" aria-label="Toggle Data menu">
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
         
-        <ul class="nav-section-content collapsed">
+        <ul class="nav-section-content">
             
             <li>
-                <a href="/categories?category=machine-learning">Machine Learning</a>
+                <a href="/categories?category=machine-learning">
+                    Machine Learning
+                    
+                    <span class="post-count">(0)</span>
+                </a>
             </li>
             
             <li>
-                <a href="/categories?category=deep-learning">Deep Learning</a>
+                <a href="/categories?category=deep-learning">
+                    Deep Learning
+                    
+                    <span class="post-count">(0)</span>
+                </a>
             </li>
             
         </ul>
@@ -109,14 +99,22 @@
             </button>
         </div>
         
-        <ul class="nav-section-content collapsed">
+        <ul class="nav-section-content">
             
             <li>
-                <a href="/categories?category=python">Python</a>
+                <a href="/categories?category=python">
+                    Python
+                    
+                    <span class="post-count">(1)</span>
+                </a>
             </li>
             
             <li>
-                <a href="/categories?category=web">Web</a>
+                <a href="/categories?category=web">
+                    Web
+                    
+                    <span class="post-count">(1)</span>
+                </a>
             </li>
             
         </ul>
@@ -131,10 +129,22 @@
             </button>
         </div>
         
-        <ul class="nav-section-content collapsed">
+        <ul class="nav-section-content">
             
             <li>
-                <a href="/categories?category=etc">Etc</a>
+                <a href="/categories?category=etc">
+                    Etc
+                    
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/categories?category=diary">
+                    Diary
+                    
+                    <span class="post-count">(1)</span>
+                </a>
             </li>
             
         </ul>
@@ -157,16 +167,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 저장된 네비게이션 상태 복원
+    // 모든 섹션을 기본적으로 열어둡니다
     document.querySelectorAll('.nav-section').forEach(function(section) {
-        const sectionId = section.querySelector('h3').textContent;
-        const savedState = localStorage.getItem('nav-section-' + sectionId);
         const content = section.querySelector('.nav-section-content');
         const icon = section.querySelector('.toggle-btn i');
-        if (savedState === 'open') {
-            content.classList.remove('collapsed');
-            icon.classList.add('rotated');
-        }
+        content.classList.remove('collapsed');
+        icon.classList.add('rotated');
     });
 });
 </script> 
@@ -254,6 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <a class="prev" href="/2025/03/30/welcome-to-my-blog/">&laquo; Welcome to My Blog</a>
             
             
+            
+            <a class="next" href="/2025/05/01/html-css-javascript/">HTML-CSS-JavaScript를 맛보고 느낀점 &raquo;</a>
             
         </div>
     </footer>

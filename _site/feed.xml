@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2025-05-29T08:45:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">jowaka31’s blog</title><author><name>jowaka</name></author><entry><title type="html">Python 이란 무엇인가.</title><link href="http://localhost:4000/2025/05/01/hello-python/" rel="alternate" type="text/html" title="Python 이란 무엇인가." /><published>2025-05-01T00:00:00+09:00</published><updated>2025-05-01T00:00:00+09:00</updated><id>http://localhost:4000/2025/05/01/hello-python</id><content type="html" xml:base="http://localhost:4000/2025/05/01/hello-python/"><![CDATA[<h1 id="python">Python?</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2025-05-30T15:40:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">jowaka31’s blog</title><author><name>jowaka</name></author><entry><title type="html">Python 이란 무엇인가.</title><link href="http://localhost:4000/2025/05/01/hello-python/" rel="alternate" type="text/html" title="Python 이란 무엇인가." /><published>2025-05-01T00:00:00+09:00</published><updated>2025-05-01T00:00:00+09:00</updated><id>http://localhost:4000/2025/05/01/hello-python</id><content type="html" xml:base="http://localhost:4000/2025/05/01/hello-python/"><![CDATA[<h1 id="python">Python?</h1>
 
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">'Hello World'</span><span class="p">)</span>
@@ -30,7 +30,166 @@
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
 
-</pre></td></tr></tbody></table></code></pre></div></div>]]></content><author><name>jowaka</name></author><category term="Python" /><summary type="html"><![CDATA[Python?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jowaka31.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/jowaka31.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Welcome to My Blog</title><link href="http://localhost:4000/2025/03/30/welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2025-03-30T00:00:00+09:00</published><updated>2025-03-30T00:00:00+09:00</updated><id>http://localhost:4000/2025/03/30/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/2025/03/30/welcome-to-my-blog/"><![CDATA[<p>This is my first blog post! I’ll be sharing my thoughts and experiences here.</p>
+</pre></td></tr></tbody></table></code></pre></div></div>]]></content><author><name>jowaka</name></author><category term="Python" /><summary type="html"><![CDATA[Python?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jowaka31.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/jowaka31.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">HTML-CSS-JavaScript를 맛보고 느낀점</title><link href="http://localhost:4000/2025/05/01/html-css-javascript/" rel="alternate" type="text/html" title="HTML-CSS-JavaScript를 맛보고 느낀점" /><published>2025-05-01T00:00:00+09:00</published><updated>2025-05-01T00:00:00+09:00</updated><id>http://localhost:4000/2025/05/01/html-css-javascript</id><content type="html" xml:base="http://localhost:4000/2025/05/01/html-css-javascript/"><![CDATA[<h1 id="웹을-공부해보았다">웹을 공부해보았다.</h1>
+
+<p>정확히 제가 공부한 것을 웹이라고 해야할지도 잘 모르겠습니다 ㅎㅎㅎ.</p>
+
+<p>일단은 <mark>HTML</mark>과 <mark>CSS</mark> 그리고 <mark>javascript</mark>를 간략하게 공부해보며 새로운 언어를 학습하는 시간을 가졌습니다.</p>
+
+<p>제가 이해한 바를 바탕으로 간단히 이 3가지 언어의 관계를 살펴보겠습니다.</p>
+
+<h2 id="html">HTML</h2>
+<p><mark>HTML</mark>은 웹에서 다양한 요소들을 보여주게 하는 언어입니다.</p>
+
+<p>이 언어를 통해서 우리는 웹 상에서 어떤 글자, 이미지, 영상을 보여줄지 선택할 수 있습니다.</p>
+
+<h3 id="간단한-html-코드">간단한 HTML 코드</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="c">&lt;!-- heading / paragraph / img / video를 보여주는 html 코드 --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>This is Heading<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is Paragraph<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://i.imgur.com/QUqjHmR.jpeg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">"https://i.imgur.com/0eRZGrJ.mp4"</span> <span class="na">controls</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>다양한 태그를 필요로 하는 언어입니다.</p>
+
+<p>하지만 그만큼 단순하여 다양한 자동완성이 있어 실제로 작성하는데 큰 무리가 있지는 않았습니다.</p>
+
+<h2 id="css">CSS</h2>
+<p><mark>CSS</mark>는 HTML을 꾸며주는 언어입니다.</p>
+
+<p>사실 언어라기 보다는 다양한 세팅값들의 모음 느낌으로 받아들여 졌습니다.</p>
+
+<p>HTML과 굉장히 밀접하게 정보를 주고 받는 것으로 이해했습니다.</p>
+
+<h3 id="간단한-css-코드">간단한 CSS 코드</h3>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c">/* main-color와 default-size를 정의한다. */</span>
+<span class="nc">.main-color</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.default-size</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>이러한 CSS 코드는 HTML에서 불러와서 사용하는 것이 가능합니다.</p>
+
+<h3 id="html에서-활용">HTML에서 활용</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- CSS를 불러오는 코드. --&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"main-color"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- class를 css 값으로 설정한다. --&gt;</span>
+        This is Heading
+        <span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"main-color"</span><span class="nt">&gt;</span>This is Paragraph<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"default-size"</span> <span class="na">src=</span><span class="s">"https://i.imgur.com/QUqjHmR.jpeg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;video</span> <span class="na">class=</span><span class="s">"default-size"</span> <span class="na">src=</span><span class="s">"https://i.imgur.com/0eRZGrJ.mp4"</span> <span class="na">controls</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="javascript">Javascript</h2>
+<p><mark>javascript</mark>는 웹브라우저가 default로 이해할 수 있는 언어로 이해했습니다.</p>
+
+<p>그렇기 때문에 javascript 코드를 통해서 웹 상에서 데이터를 주고 받는것이 가능하다고 느꼈습니다.</p>
+
+<p>로그인, 검색과 같은 작업을 수행할 때 backend와 정보를 주고 받아야하는 상황에서 javascript는 활용하기 굉장히 용이한 것으로 이해했습니다.</p>
+
+<h3 id="javascript의-특징">javascript의 특징</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c1">// javascript를 간단히 Hello, World를 출력</span>
+<span class="kd">let</span> <span class="nx">language</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">javascript</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">language</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>javascript는 웹 브라우저가 이해할 수 있는 언어이기에 <mark>front-end</mark> 언어로 쓰였습니다.</p>
+
+<p>하지만 <mark>node</mark>라는 것이 나온 후 브라우저 밖에서도 실행이 가능해졌습니다.</p>
+
+<p>즉, 일반적인 프로그래밍 언어와 같이 동작할 수 있게 되었고 이후에 <mark>backend</mark>라이브러리와 같은것이 생겨난 것으로 이해했습니다.</p>
+
+<h2 id="결론">결론</h2>
+<p>저는 <mark>Python</mark>을 주력으로 활용하고 <mark>R</mark>과 <mark>SAS</mark> <mark>SQL</mark>을 이해할 수 있습니다.</p>
+
+<p>간단히 javascript를 공부하며 느낀점은 굉장히 매력적인 언어라는 생각이 들었습니다.</p>
+
+<p>python도 언어가 굉장히 유연한 편이지만 <mark>그것보다 더 유연한 점</mark>도 있다고 생각했습니다.</p>
+
+<p>앞으로 javascript를 조금 더 공부해보고 싶습니다.</p>]]></content><author><name>jowaka</name></author><category term="Web" /><summary type="html"><![CDATA[웹을 공부해보았다.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jowaka31.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/jowaka31.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Welcome to My Blog</title><link href="http://localhost:4000/2025/03/30/welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2025-03-30T00:00:00+09:00</published><updated>2025-03-30T00:00:00+09:00</updated><id>http://localhost:4000/2025/03/30/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/2025/03/30/welcome-to-my-blog/"><![CDATA[<p>This is my first blog post! I’ll be sharing my thoughts and experiences here.</p>
 
 <h1 id="what-to-expect">What to expect</h1>
 

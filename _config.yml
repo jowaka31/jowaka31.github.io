@@ -23,10 +23,6 @@ author:
 # Navigation
 navigation:
   
-  - title: Diary
-    children:
-      - Diary
-  
   - title: Data
     children:
       - Machine Learning
@@ -40,6 +36,7 @@ navigation:
   - title: Etc
     children:
       - Etc
+      - Diary
 
 
 # SEO settings
