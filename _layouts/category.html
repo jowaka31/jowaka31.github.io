@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="category-page">
+    <h1 class="category-title">{{ page.category | capitalize }}</h1>
+    
+    {% assign category_posts = site.posts | where: "categories", page.category %}
+    
+    {% if category_posts.size > 0 %}
+        {% for post in category_posts %}
+        <article class="post-preview">
+            <h2 class="post-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h2>
+            <div class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%Y-%m-%d" }}
+                </time>
+            </div>
+        </article>
+        {% endfor %}
+    {% else %}
+        <div class="no-posts">
+            <p>아직 이 카테고리에 게시물이 없습니다.</p>
+        </div>
+    {% endif %}
+</div> 

@@ -1,0 +1,140 @@
+@import "{{ site.theme }}";
+
+// 이미지 전역 스타일
+.post-content img,
+.page-content img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+// 기본 폰트 크기 및 가독성 개선
+body {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.post-content, .page-content {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+// 목차 스타일
+.toc {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  width: 240px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+
+  h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.3em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    ul {
+      padding-left: 1.5em;
+    }
+  }
+
+  li {
+    margin: 0.4em 0;
+    line-height: 1.4;
+  }
+
+  a {
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.9em;
+
+    &:hover {
+      color: #228be6;
+    }
+  }
+}
+
+// 목차가 있을 때 본문 여백 조정
+.page-content, .post-content {
+  max-width: calc(100% - 300px);
+}
+
+// 인용문 스타일
+.post-content blockquote,
+.page-content blockquote {
+  margin: 2rem 2rem 2rem 3rem;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #228be6;
+  background-color: #f8f9fa;
+  font-style: italic;
+
+  p {
+    margin: 0;
+    color: #495057;
+  }
+
+  p:last-child {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #868e96;
+    text-align: right;
+  }
+}
+
+// 기본 blockquote 스타일 재정의
+blockquote {
+  margin: 2rem 2rem 2rem 3rem;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #228be6;
+  background-color: #f8f9fa;
+  font-style: italic;
+
+  p {
+    margin: 0;
+    color: #495057;
+  }
+
+  p:last-child {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #868e96;
+    text-align: right;
+  }
+
+  // 중첩된 목록 스타일 개선
+  ol, ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    
+    li {
+      margin: 0.3rem 0;
+      color: #495057;
+    }
+
+    p {
+      margin: 0.2rem 0;
+    }
+  }
+
+  // 2단계 이상 중첩된 목록
+  ol ol, ul ul, ol ul, ul ol {
+    margin: 0.2rem 0;
+    
+    li {
+      color: #495057;
+    }
+  }
+} 

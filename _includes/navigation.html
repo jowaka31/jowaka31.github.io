@@ -1,0 +1,49 @@
+<nav class="site-nav">
+    {% for item in site.navigation %}
+    <div class="nav-section">
+        <div class="nav-section-header">
+            <h3>{{ item.title }}</h3>
+            <button class="toggle-btn" aria-label="Toggle {{ item.title }} menu">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        {% if item.children %}
+        <ul class="nav-section-content">
+            {% for child in item.children %}
+            <li>
+                <a href="/categories?category={{ child | downcase | replace: ' ', '-' }}">
+                    {{ child }}
+                    {% assign category_posts = site.categories[child] | default: empty_array %}
+                    <span class="post-count">({{ category_posts.size | default: 0 }})</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endfor %}
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 네비게이션 토글 기능
+    document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            icon.classList.toggle('rotated');
+            const content = this.closest('.nav-section').querySelector('.nav-section-content');
+            content.classList.toggle('collapsed');
+            const sectionId = this.closest('.nav-section').querySelector('h3').textContent;
+            localStorage.setItem('nav-section-' + sectionId, content.classList.contains('collapsed') ? 'closed' : 'open');
+        });
+    });
+
+    // 모든 섹션을 기본적으로 열어둡니다
+    document.querySelectorAll('.nav-section').forEach(function(section) {
+        const content = section.querySelector('.nav-section-content');
+        const icon = section.querySelector('.toggle-btn i');
+        content.classList.remove('collapsed');
+        icon.classList.add('rotated');
+    });
+});
+</script> 

@@ -1,0 +1,107 @@
+# Base
+title: jowaka31's blog
+description: 
+baseurl: ""
+url: "https://jowaka31.github.io"
+
+# Site settings
+lang: ko-KR
+timezone: Asia/Seoul
+encoding: UTF-8
+
+# Author information
+author:
+  name: jowaka
+  image: ./assets/images/jowaka31.png
+  bio : >
+    일반적인 것들에 대한 <br>
+    구체적인 이야기
+  social:
+    github: jowaka31
+    email: jowaka31@gmail.com
+
+# Navigation
+navigation:
+  
+  - title: Data
+    children:
+      - Machine Learning
+      - Deep Learning
+      - Optimization
+  
+  - title: Computer
+    children:
+      - Python
+      - Web
+
+  - title: Etc
+    children:
+      - Etc
+      - Diary
+
+
+# SEO settings
+twitter:
+  username: jowaka31
+  card: summary
+social:
+  name: jowaka
+  links:
+    - https://github.com/jowaka31
+    - mailto:jowaka31@gmail.com
+
+# Analytics
+google_analytics: # your Google Analytics tracking ID
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+  auto_ids: true
+  enable_coderay: false
+  parse_span_html: true
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+permalink: /:year/:month/:day/:title/
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-minifier
+
+# jekyll-minifier settings
+jekyll-minifier:
+  preserve_php: true
+  remove_comments: true
+  compress_css: true
+  compress_javascript: true
+  exclude: ['*.xml']
+  uglifier_args:
+    harmony: true
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Feed settings
+feed:
+  path: feed.xml
+  posts_limit: 20
+
+# Sitemap settings
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /assets/images/jowaka31.jpg # 기본 썸네일 이미지

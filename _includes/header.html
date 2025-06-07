@@ -1,0 +1,24 @@
+<header class="site-header">
+    <nav class="top-nav">
+        <a href="{{ '/' | relative_url }}" class="nav-link">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="{{ '/about/' | relative_url }}" class="nav-link">
+            <i class="fas fa-user"></i> Me
+        </a>
+    </nav>
+    <div class="profile">
+        <h1 class="site-title">{{ site.title }}</h1>
+        <p class="site-description">{{ site.description }}</p>
+        {% if site.author.image %}
+        <div class="profile-image">
+            <img src="{{ site.author.image | relative_url }}" alt="{{ site.author.name }}">
+        </div>
+        {% endif %}
+        <div class="author-info">
+            <h2>{{ site.author.name }}</h2>
+            <p>{{ site.author.bio }}</p>
+        </div>
+        {% include social-links.html %}
+    </div>
+</header> 

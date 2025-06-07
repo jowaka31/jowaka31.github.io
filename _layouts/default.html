@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}">
+    {% include head.html %}
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            {% include header.html %}
+            {% include navigation.html %}
+        </aside>
+
+        <main class="content">
+            {{ content }}
+        </main>
+
+        {% if page.layout == 'post' or page.layout == 'page' %}
+        <aside class="toc-sidebar">
+            <div class="toc-container">
+                <div id="toc"></div>
+            </div>
+        </aside>
+        {% endif %}
+    </div>
+
+    {% include footer.html %}
+
+    {% if page.layout == 'post' or page.layout == 'page' %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 목차 생성
+            const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .page-content h1, .page-content h2, .page-content h3');
+            const toc = document.querySelector('#toc');
+            if (toc && headings.length > 0) {
+                const tocList = document.createElement('ul');
+                tocList.className = 'toc-list';
+                
+                // 최소 헤딩 레벨 찾기
+                let minLevel = 6;
+                headings.forEach(heading => {
+                    const level = parseInt(heading.tagName.charAt(1));
+                    minLevel = Math.min(minLevel, level);
+                });
+                
+                // 목차 생성
+                headings.forEach((heading, index) => {
+                    heading.id = heading.id || `heading-${index}`;
+                    const level = parseInt(heading.tagName.charAt(1));
+                    const relativeLevel = level - minLevel + 1;
+                    
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `#${heading.id}`;
+                    a.textContent = heading.textContent;
+                    a.className = `toc-h${relativeLevel}`;
+                    
+                    a.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
+                    
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+                
+                toc.appendChild(tocList);
+
+                // 스크롤 이벤트로 현재 섹션 하이라이트
+                window.addEventListener('scroll', () => {
+                    const scrollPosition = window.scrollY;
+                    
+                    headings.forEach((heading, index) => {
+                        const link = tocList.querySelector(`a[href="#${heading.id}"]`);
+                        if (!link) return;
+                        
+                        const nextHeading = headings[index + 1];
+                        const isActive = 
+                            scrollPosition >= heading.offsetTop - 100 && 
+                            (!nextHeading || scrollPosition < nextHeading.offsetTop - 100);
+                        
+                        link.classList.toggle('active', isActive);
+                    });
+                });
+            }
+        });
+    </script>
+    {% endif %}
+</body>
+</html> 
